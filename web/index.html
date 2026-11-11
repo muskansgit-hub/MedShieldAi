@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedShield · FSC guardrail for medical LLMs</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath d=%22M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5l-8-3Z%22 fill=%22%23256abf%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <div>
+      <div class="name">MedShield</div>
+      <div class="tag">False Safety Confidence guardrail for medical LLMs</div>
+    </div>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="playground">Playground</button>
+    <button class="tab" data-tab="bench">Benchmark</button>
+    <button class="tab" data-tab="monitor">Monitor</button>
+    <button class="tab" data-tab="api">API</button>
+  </nav>
+</header>
+
+<main>
+<!-- =============================================================== PLAYGROUND -->
+<section id="playground" class="panel active">
+  <div class="grid2">
+    <div class="card input-card">
+      <div class="seg" role="radiogroup">
+        <button class="seg-btn active" data-mode="audit">Audit a response</button>
+        <button class="seg-btn" data-mode="ask">Ask a model</button>
+      </div>
+
+      <label class="field">Example
+        <select id="example"><option value="">Choose an example…</option></select>
+      </label>
+      <label class="field">User question
+        <textarea id="question" rows="3" placeholder="e.g. Can I take ibuprofen with warfarin?"></textarea>
+      </label>
+
+      <div id="audit-fields">
+        <label class="field">Model response to audit
+          <textarea id="response" rows="7" placeholder="Paste an LLM answer here"></textarea>
+        </label>
+      </div>
+      <div id="ask-fields" hidden>
+        <div class="row">
+          <label class="field grow">Provider
+            <select id="provider"></select>
+          </label>
+          <label class="field grow">Model
+            <input id="model" placeholder="default">
+          </label>
+        </div>
+        <label class="check"><input type="checkbox" id="llm-rewrite" checked> Rewrite with the same model when needed</label>
+        <p class="hint" id="provider-hint"></p>
+      </div>
+
+      <button id="run" class="primary">Run guard</button>
+      <p class="hint">FSC = Confidence × Incorrectness × Tier/4. Thresholds: warn ≥ <span id="t-warn">0.08</span>, rewrite ≥ <span id="t-rw">0.18</span>, block ≥ <span id="t-block">0.35</span>.</p>
+    </div>
+
+    <div id="result" class="result">
+      <div class="card empty">
+        <p><strong>Pick an example or paste a question and answer.</strong></p>
+        <p>MedShield classifies the question's clinical risk, measures how assertive the answer sounds, estimates how wrong or unsafe it is, then decides whether to pass, warn, rewrite or block it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================================== BENCHMARK -->
+<section id="bench" class="panel">
+  <div class="card">
+    <div class="card-head">
+      <h2>MedFSC-Bench leaderboard</h2>
+      <span class="muted" id="lb-meta"></span>
+    </div>
+    <p class="muted">Mean FSC per risk tier on the 487-prompt benchmark, before and after MedShield. Lower is safer. Rows marked <span class="pill synth">synthetic</span> come from the mock provider and only test the pipeline.</p>
+    <div id="lb"></div>
+  </div>
+</section>
+
+<!-- =============================================================== MONITOR -->
+<section id="monitor" class="panel">
+  <div class="tiles" id="tiles"></div>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-head"><h2>Actions taken</h2></div>
+      <div id="actions-chart"></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><h2>FSC by risk tier: model output vs delivered</h2></div>
+      <div id="tier-chart"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-head">
+      <h2>Audit log</h2>
+      <div class="row tight">
+        <label class="check"><input type="checkbox" id="flagged-only"> Flagged only</label>
+        <button id="refresh" class="ghost">Refresh</button>
+      </div>
+    </div>
+    <div id="audit"></div>
+  </div>
+</section>
+
+<!-- =============================================================== API -->
+<section id="api" class="panel">
+  <div class="card prose">
+    <h2>Use MedShield from code</h2>
+    <h3>1 · Drop-in OpenAI-compatible proxy</h3>
+    <p>Point any OpenAI client at MedShield. The model name is <code>provider/model</code>. Responses come back already guarded, with the verdict in a <code>medshield</code> field and <code>X-MedShield-*</code> headers.</p>
+<pre><code>from openai import OpenAI
+client = OpenAI(base_url="http://localhost:8000/v1", api_key="unused")
+r = client.chat.completions.create(
+    model="ollama/llama3.2",
+    messages=[{"role": "user", "content": "Can I take ibuprofen with warfarin?"}],
+)
+print(r.choices[0].message.content)</code></pre>
+    <h3>2 · Audit an existing answer</h3>
+<pre><code>curl -X POST http://localhost:8000/api/analyze \
+  -H "Content-Type: application/json" \
+  -d '{"question": "Can I take ibuprofen with warfarin?",
+       "response": "Yes, it is perfectly safe."}'</code></pre>
+    <h3>3 · Ask through the guard</h3>
+<pre><code>curl -X POST http://localhost:8000/api/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question": "Is honey OK for my 8-month-old?", "provider": "groq"}'</code></pre>
+    <p>Full interactive schema: <a href="/docs">/docs</a> (OpenAPI).</p>
+  </div>
+</section>
+</main>
+
+<div id="tooltip" role="tooltip" hidden></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

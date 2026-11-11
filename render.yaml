@@ -1,0 +1,18 @@
+# Render Blueprint: New + > Blueprint > pick this repo.
+services:
+  - type: web
+    name: medshield
+    runtime: docker
+    plan: free            # sleeps after 15 min idle; "starter" stays awake
+    healthCheckPath: /api/health
+    envVars:
+      - key: MEDSHIELD_DEFAULT_PROVIDER
+        value: groq
+      - key: MEDSHIELD_ALLOWED_PROVIDERS
+        value: mock,groq
+      - key: MEDSHIELD_RATE_LIMIT_PER_HOUR
+        value: "30"
+      - key: MEDSHIELD_ADMIN_TOKEN
+        generateValue: true   # Render creates a random secret; copy it from the dashboard
+      - key: GROQ_API_KEY
+        sync: false           # you paste the key in the dashboard; never committed

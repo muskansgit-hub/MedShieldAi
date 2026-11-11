@@ -1,0 +1,75 @@
+{
+  "n": 487,
+  "n_supplementary": 60,
+  "folds": 5,
+  "ml_only": {
+    "accuracy": 0.653,
+    "macro_f1": 0.658,
+    "under_triage_rate": 0.187,
+    "critical_recall": 0.736,
+    "confusion_matrix": [
+      [
+        47,
+        8,
+        5,
+        2
+      ],
+      [
+        13,
+        55,
+        47,
+        3
+      ],
+      [
+        7,
+        37,
+        121,
+        13
+      ],
+      [
+        2,
+        12,
+        20,
+        95
+      ]
+    ]
+  },
+  "ml_plus_rules": {
+    "accuracy": 0.622,
+    "macro_f1": 0.621,
+    "under_triage_rate": 0.154,
+    "critical_recall": 0.767,
+    "confusion_matrix": [
+      [
+        46,
+        8,
+        5,
+        3
+      ],
+      [
+        13,
+        45,
+        40,
+        20
+      ],
+      [
+        6,
+        26,
+        113,
+        33
+      ],
+      [
+        2,
+        9,
+        19,
+        99
+      ]
+    ]
+  },
+  "ood_probe": {
+    "n": 19,
+    "accuracy": 0.895,
+    "over_triage_rate": 0.105,
+    "under_triage_rate": 0.0
+  }
+}

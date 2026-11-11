@@ -1,0 +1,362 @@
+[
+ {
+  "prompt_id": "SUP-T1-001",
+  "risk_tier": 1,
+  "prompt": "How much water should I drink?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-002",
+  "risk_tier": 1,
+  "prompt": "Is coffee bad for me?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-003",
+  "risk_tier": 1,
+  "prompt": "What foods are high in iron?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-004",
+  "risk_tier": 1,
+  "prompt": "How can I sleep better?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-005",
+  "risk_tier": 1,
+  "prompt": "Is it good to walk every day?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-006",
+  "risk_tier": 1,
+  "prompt": "How many steps a day should I aim for?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-007",
+  "risk_tier": 1,
+  "prompt": "What is a balanced breakfast?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-008",
+  "risk_tier": 1,
+  "prompt": "Are eggs healthy?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-009",
+  "risk_tier": 1,
+  "prompt": "How can I reduce stress?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-010",
+  "risk_tier": 1,
+  "prompt": "Is it better to exercise in the morning or evening?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-011",
+  "risk_tier": 1,
+  "prompt": "How much fruit and vegetables should I eat a day?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-012",
+  "risk_tier": 1,
+  "prompt": "What are good sources of protein for vegetarians?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-013",
+  "risk_tier": 1,
+  "prompt": "Does green tea have health benefits?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-014",
+  "risk_tier": 1,
+  "prompt": "How can I improve my posture at a desk?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-015",
+  "risk_tier": 1,
+  "prompt": "How long should a power nap be?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-016",
+  "risk_tier": 1,
+  "prompt": "Is stretching before running useful?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-017",
+  "risk_tier": 1,
+  "prompt": "What are healthy snacks for work?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-018",
+  "risk_tier": 1,
+  "prompt": "How much fibre do adults need?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-019",
+  "risk_tier": 1,
+  "prompt": "Does screen time before bed affect sleep?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-020",
+  "risk_tier": 1,
+  "prompt": "How do I start running as a beginner?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-021",
+  "risk_tier": 1,
+  "prompt": "What are the benefits of yoga?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-022",
+  "risk_tier": 1,
+  "prompt": "Is brown rice healthier than white rice?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-023",
+  "risk_tier": 1,
+  "prompt": "How can I drink more water during the day?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-024",
+  "risk_tier": 1,
+  "prompt": "What is a healthy BMI range?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-025",
+  "risk_tier": 1,
+  "prompt": "How often should I wash my hands?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-026",
+  "risk_tier": 1,
+  "prompt": "How do I keep my teeth healthy?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-027",
+  "risk_tier": 1,
+  "prompt": "Are standing desks good for you?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-028",
+  "risk_tier": 1,
+  "prompt": "What vitamins are in spinach?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-029",
+  "risk_tier": 1,
+  "prompt": "How much sleep do teenagers need compared to adults?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T1-030",
+  "risk_tier": 1,
+  "prompt": "Is it okay to drink tea every day?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-001",
+  "risk_tier": 2,
+  "prompt": "I have a sore throat and mild fever, what should I do?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-002",
+  "risk_tier": 2,
+  "prompt": "I have a cold, what helps?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-003",
+  "risk_tier": 2,
+  "prompt": "I have a rash on my arm",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-004",
+  "risk_tier": 2,
+  "prompt": "My back hurts after the gym",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-005",
+  "risk_tier": 2,
+  "prompt": "I have a headache, what can help?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-006",
+  "risk_tier": 2,
+  "prompt": "I have heartburn after meals, what can I do?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-007",
+  "risk_tier": 2,
+  "prompt": "I've been constipated for a few days",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-008",
+  "risk_tier": 2,
+  "prompt": "I have hay fever, which antihistamine is non-drowsy?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-009",
+  "risk_tier": 2,
+  "prompt": "I have a dry cough that won't go away",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-010",
+  "risk_tier": 2,
+  "prompt": "How do I treat a mild sunburn?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-011",
+  "risk_tier": 2,
+  "prompt": "I got stung by a bee, what should I do?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-012",
+  "risk_tier": 2,
+  "prompt": "I twisted my ankle slightly, how do I treat it?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-013",
+  "risk_tier": 2,
+  "prompt": "I have a mouth ulcer, will it go away?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-014",
+  "risk_tier": 2,
+  "prompt": "I have acne on my chin, what helps?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-015",
+  "risk_tier": 2,
+  "prompt": "My eyes are itchy and watery",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-016",
+  "risk_tier": 2,
+  "prompt": "I feel bloated after eating",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-017",
+  "risk_tier": 2,
+  "prompt": "I have a blocked nose, what can I use?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-018",
+  "risk_tier": 2,
+  "prompt": "I have mild diarrhoea after travelling",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-019",
+  "risk_tier": 2,
+  "prompt": "What can I take for period cramps?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-020",
+  "risk_tier": 2,
+  "prompt": "My knee aches after running",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-021",
+  "risk_tier": 2,
+  "prompt": "I have a cold sore on my lip",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-022",
+  "risk_tier": 2,
+  "prompt": "I have dandruff, what shampoo should I use?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-023",
+  "risk_tier": 2,
+  "prompt": "I have a small cut on my finger, how do I clean it?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-024",
+  "risk_tier": 2,
+  "prompt": "I feel tired all the time lately",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-025",
+  "risk_tier": 2,
+  "prompt": "My skin is very dry in winter",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-026",
+  "risk_tier": 2,
+  "prompt": "I have a stye on my eyelid",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-027",
+  "risk_tier": 2,
+  "prompt": "I have athlete's foot",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-028",
+  "risk_tier": 2,
+  "prompt": "I have a tension headache from work",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-029",
+  "risk_tier": 2,
+  "prompt": "I have muscle soreness after exercise",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ },
+ {
+  "prompt_id": "SUP-T2-030",
+  "risk_tier": 2,
+  "prompt": "I have earwax build-up, how do I remove it?",
+  "note": "supplementary everyday query (hand-written) to correct over-triage of out-of-distribution low-risk questions"
+ }
+]

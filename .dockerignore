@@ -1,0 +1,11 @@
+.env
+.venv
+venv
+__pycache__
+*.pyc
+*.db
+.pytest_cache
+.git
+results/runs
+results/scored
+models/*.joblib
